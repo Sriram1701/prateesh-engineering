@@ -410,7 +410,7 @@ ul {
 
 /* About Section */
 .about-section {
-    padding: 60px 0;
+    padding: 40px 0;
     background-color: var(--dark);
     position: relative;
     overflow: hidden;
@@ -599,7 +599,7 @@ ul {
 /* Advantage Section */
 .advantage-section {
     background-color: var(--dark);
-    padding: 60px 0;
+    padding: 40px 0;
     color: var(--text-main);
     border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -696,7 +696,7 @@ ul {
 
 /* Projects Section */
 .projects-section {
-    padding: 60px 0;
+    padding: 40px 0;
     background-color: var(--dark);
 }
 
@@ -916,7 +916,7 @@ ul {
 
 /* FAQ Section */
 .faq-section {
-    padding: 60px 0;
+    padding: 40px 0;
     background-color: var(--dark-light);
 }
 
@@ -985,7 +985,7 @@ ul {
 
 /* Gallery Section */
 .gallery-section {
-    padding: 60px 0;
+    padding: 40px 0;
     background-color: var(--dark-light);
 }
 
@@ -1037,7 +1037,7 @@ ul {
 
 /* Reviews Section */
 .reviews-section {
-    padding: 60px 0;
+    padding: 40px 0;
     background-color: var(--dark);
 }
 
@@ -1607,7 +1607,7 @@ ul {
 
 .services-section {
     background-color: #f8f9fa;
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 /* Additional Mobile View Optimizations */
@@ -1654,5 +1654,53 @@ ul {
         width: 96%;
         left: 2%;
         padding: 8px 15px;
+    }
+}
+
+
+/* Final Mobile Layout & Text Optimizations */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow causing sections to go out of bounds */
+    body, html {
+        overflow-x: hidden;
+    }
+    section, .marquee-wrapper, .clients-marquee {
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+    
+    /* Fixing huge text */
+    .section-title {
+        font-size: 1.4rem !important;
+    }
+    .advantage-title {
+        font-size: 1.3rem !important; /* Fits "The Prateesh Engineering Enterprises Advantage" in 2 lines */
+    }
+    .hero-content h2 {
+        font-size: 2.2rem !important;
+    }
+    
+    /* Project & Client Sections Fit */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .project-card {
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.2rem !important;
+    }
+    .advantage-title {
+        font-size: 1.1rem !important;
+    }
+    .hero-content h2 {
+        font-size: 1.8rem !important;
     }
 }
