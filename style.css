@@ -410,7 +410,7 @@ ul {
 
 /* About Section */
 .about-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--dark);
     position: relative;
     overflow: hidden;
@@ -599,7 +599,7 @@ ul {
 /* Advantage Section */
 .advantage-section {
     background-color: var(--dark);
-    padding: 100px 0;
+    padding: 60px 0;
     color: var(--text-main);
     border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -696,7 +696,7 @@ ul {
 
 /* Projects Section */
 .projects-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--dark);
 }
 
@@ -916,7 +916,7 @@ ul {
 
 /* FAQ Section */
 .faq-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--dark-light);
 }
 
@@ -985,7 +985,7 @@ ul {
 
 /* Gallery Section */
 .gallery-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--dark-light);
 }
 
@@ -1037,7 +1037,7 @@ ul {
 
 /* Reviews Section */
 .reviews-section {
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--dark);
 }
 
@@ -1607,7 +1607,7 @@ ul {
 
 .services-section {
     background-color: #f8f9fa;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 /* Additional Mobile View Optimizations */
