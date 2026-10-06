@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Project Gallery | PRATEESHH Engineering Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-page-header {
+            padding: 120px 0 40px;
+            background-color: var(--bg-main);
+            text-align: center;
+        }
+        .service-page-header h1 {
+            font-size: 3rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+        .service-page-header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+            background-color: var(--dark-light);
+        }
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-btn:hover {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <div class="logo-text">
+                    <h1>PRATEESHH <span>ENGINEERING ENTERPRISES</span></h1>
+                </div>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="service-page-header">
+        <div class="container">
+            <h1>Full Project Gallery</h1>
+            <p>We specialize in the manufacturing of high-quality industrial equipments, storage tanks, and pressure vessels designed to meet exact specifications and safety standards.</p>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <div class="gallery-grid-wrapper" style="background-color: var(--dark-light);">
+        <div class="container">
+            <h2 style="color: var(--text-main); padding-top: 40px; margin-bottom: 20px; text-align: center;">Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="photos/gallery/erection/heavy-equipment-erection.jpg" alt="Heavy Equipment Erection"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/structural-steel-tower.jpg" alt="Structural Steel Tower"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/chemplast-sanmar-plant.jpg" alt="Chemplast Sanmar Plant"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/industrial-equipment.jpg" alt="Industrial Equipment"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/site-work-01.jpg" alt="Site Work 1"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/site-work-02.jpg" alt="Site Work 2"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/equipment-maintenance.jpg" alt="Equipment Maintenance"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/mechanical-stress-analysis.png" alt="Mechanical Stress Analysis"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/pipe-fabrication-01.jpg" alt="Pipe Fabrication"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/industrial-ducting.jpg" alt="Industrial Ducting"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/welding-work.jpg" alt="Welding Works"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/metal-grinding-work.jpg" alt="Metal Grinding"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/structural-steel-fabrication.jpg" alt="Structural Steel Fabrication"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/pipeline-erection.png" alt="Pipeline Erection"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/exhaust-ventilation-system.jpg" alt="Exhaust Ventilation System"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/industrial-piping-network.jpg" alt="Industrial Piping Network"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/piping-installation.jpg" alt="Piping Installation"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/piping-fabricator.png" alt="Piping Fabricator"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/heavy-fabrication-01.png" alt="Heavy Fabrication"></div>
+                <div class="gallery-item"><img src="photos/gallery/manpower/manpower-services.jpg" alt="Manpower Services"></div>
+                <div class="gallery-item"><img src="photos/gallery/manpower/manpower-supply.jpg" alt="Manpower Supply"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/storage-tank-1500kl.jpg" alt="Storage Tank 1500KL"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/pressure-vessel-fabrication.jpg" alt="Pressure Vessel Fabrication"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/pressure-vessel-work.jpg" alt="Pressure Vessel Work"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/tank-engineering-design.webp" alt="Tank Engineering Design"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="bottom-copyright" style="background-color: var(--dark); padding: 30px 0;">
+        <div class="container">
+            <div class="copyright-content" style="display: flex; justify-content: space-between; color: #94a3b8;">
+                <p>&copy; 2026 PRATEESHH Engineering Enterprises.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
