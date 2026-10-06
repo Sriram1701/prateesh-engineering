@@ -236,7 +236,7 @@ ul {
 
 .menu-toggle {
     display: none;
-    color: var(--text-main);
+    color: #ffffff;
     font-size: 1.5rem;
     cursor: pointer;
 }
