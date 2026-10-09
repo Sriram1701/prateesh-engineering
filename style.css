@@ -183,6 +183,15 @@ ul {
 .logo-svg {
     color: var(--primary);
     transition: var(--transition);
+    background-color: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    padding: 6px;
+}
+
+.navbar.scrolled .logo-svg {
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .navbar.scrolled .logo-e {
