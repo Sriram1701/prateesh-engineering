@@ -415,10 +415,6 @@ ul {
     font-weight: 800;
 }
 
-.stat-item h3::after {
-    content: '+';
-}
-
 .stat-item span {
     font-size: 0.85rem;
     color: #e2e8f0;
