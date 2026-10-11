@@ -967,9 +967,10 @@ ul {
     padding: 24px 20px;
     background: #ffffff;
     color: var(--text-main);
-    border-radius: 12px;
+    border-radius: 10px;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
 
@@ -984,21 +985,22 @@ ul {
 
 .agencies-content {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 10px;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .agencies-line {
     color: var(--gray);
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 0.95vw, 0.95rem);
     line-height: 1.5;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 8px;
+    gap: 10px;
     white-space: nowrap;
 }
 
@@ -1006,6 +1008,10 @@ ul {
     color: var(--primary);
     font-weight: 600;
     opacity: 0.7;
+}
+
+.agencies-mid-sep {
+    display: inline;
 }
 
 /* FAQ Section */
@@ -2607,7 +2613,12 @@ html, body {
     }
 
     .agencies-content {
+        flex-direction: column !important;
         gap: 5px !important;
+    }
+
+    .agencies-mid-sep {
+        display: none !important;
     }
 
     .agencies-line {
@@ -3013,7 +3024,12 @@ html, body {
     }
 
     .agencies-content {
+        flex-direction: column !important;
         gap: 4px !important;
+    }
+
+    .agencies-mid-sep {
+        display: none !important;
     }
 
     .agencies-line {
