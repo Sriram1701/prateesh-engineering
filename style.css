@@ -1316,27 +1316,27 @@ ul {
 
 .footer-brand-logo {
     display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    margin-bottom: 24px;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
 .footer-logo-svg {
-    width: 65px;
-    height: 65px;
+    width: 62px;
+    height: 62px;
     color: var(--primary);
     background-color: var(--white);
     border-radius: 50%;
-    padding: 6px;
+    padding: 5px;
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.15);
     border: 1px solid rgba(255, 0, 0, 0.12);
     flex-shrink: 0;
-    margin-top: 4px;
 }
 
 .footer-brand-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .footer-brand-text h2 {
@@ -1362,11 +1362,12 @@ ul {
 }
 
 .footer-brand-desc {
-    color: #666666;
+    color: #4b5563;
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 24px;
+    max-width: 520px;
 }
 
 .info-list {
@@ -2738,8 +2739,8 @@ html, body {
 
     .footer-brand-logo {
         gap: 14px !important;
-        margin-bottom: 20px !important;
-        align-items: flex-start !important;
+        margin-bottom: 14px !important;
+        align-items: center !important;
     }
 
     .footer-logo-svg {
@@ -2747,12 +2748,13 @@ html, body {
         height: 54px !important;
         padding: 5px !important;
         flex-shrink: 0 !important;
-        margin-top: 2px !important;
+        margin-top: 0 !important;
     }
 
     .footer-brand-text {
         display: flex !important;
         flex-direction: column !important;
+        justify-content: center !important;
     }
 
     .footer-brand-text h2 {
@@ -2779,11 +2781,11 @@ html, body {
     }
 
     .footer-brand-desc {
-        color: #666666 !important;
+        color: #4b5563 !important;
         font-size: 0.9rem !important;
         line-height: 1.55 !important;
-        margin-top: 8px !important;
-        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
     }
 
     .info-item {
@@ -3027,8 +3029,8 @@ html, body {
 
     .footer-brand-logo {
         gap: 12px !important;
-        margin-bottom: 18px !important;
-        align-items: flex-start !important;
+        margin-bottom: 12px !important;
+        align-items: center !important;
     }
 
     .footer-logo-svg {
@@ -3036,7 +3038,13 @@ html, body {
         height: 48px !important;
         padding: 4px !important;
         flex-shrink: 0 !important;
-        margin-top: 2px !important;
+        margin-top: 0 !important;
+    }
+
+    .footer-brand-text {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
 
     .footer-brand-text h2 {
@@ -3062,10 +3070,10 @@ html, body {
     }
 
     .footer-brand-desc {
-        font-size: 0.85rem !important;
+        font-size: 0.86rem !important;
         line-height: 1.5 !important;
-        margin-top: 6px !important;
-        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 18px !important;
     }
 
     .nav-links {
