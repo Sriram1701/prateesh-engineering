@@ -311,7 +311,7 @@ ul {
     width: 100%;
     height: 100%;
     z-index: -2;
-    background: #000000 url('photos/hero-image/hero-bg.jpg') center/cover no-repeat;
+    background: #000000;
 }
 
 .hero-bg img, .hero-bg video {

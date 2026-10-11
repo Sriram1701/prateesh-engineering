@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     
+    // Ensure hero video plays immediately without delay
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+        heroVideo.play().catch(() => {});
+    }
+    
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
