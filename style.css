@@ -1614,8 +1614,28 @@ html, body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     height: 320px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+/* Scroll-triggered Load Animation for Service Cards */
+.js-enabled .horizontal-service-card {
+    opacity: 0;
+    transform: translateY(35px) scale(0.98);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.35s ease;
+    will-change: opacity, transform;
+}
+
+.js-enabled .horizontal-service-card.card-loaded {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+.horizontal-service-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .horizontal-service-card.reverse {
@@ -1631,7 +1651,7 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .horizontal-service-card:hover .h-service-img img {

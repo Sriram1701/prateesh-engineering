@@ -151,25 +151,79 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Number Counter Animation for Hero Stats
+    // Add js-enabled class to document root for progressive enhancement animations
+    document.documentElement.classList.add('js-enabled');
+
+    // Smooth Scroll Reveal Animation for Service Cards
+    const serviceCards = document.querySelectorAll('.horizontal-service-card');
+    if ('IntersectionObserver' in window && serviceCards.length > 0) {
+        const serviceObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('card-loaded');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        serviceCards.forEach(card => {
+            serviceObserver.observe(card);
+        });
+    } else {
+        serviceCards.forEach(card => card.classList.add('card-loaded'));
+    }
+
+    // Number Counter Animation for Hero Stats (triggers on scroll when viewed)
+    const statSection = document.querySelector('.hero-stats');
     const counters = document.querySelectorAll('.counter');
-    const speed = 200;
+    let countersStarted = false;
 
-    counters.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const inc = target / speed;
+    const startCounters = () => {
+        if (countersStarted) return;
+        countersStarted = true;
 
-            if (count < target) {
-                counter.innerText = Math.ceil(count + inc);
-                setTimeout(updateCount, 15);
-            } else {
-                counter.innerText = target;
-            }
-        };
-        setTimeout(updateCount, 500); // delay start slightly
-    });
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target') || 0;
+            const duration = 1600; // 1.6s smooth easing
+            const startTime = performance.now();
+
+            const updateCount = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out cubic
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const currentVal = Math.floor(easeOut * target);
+
+                counter.innerText = currentVal + '+';
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+
+            requestAnimationFrame(updateCount);
+        });
+    };
+
+    if ('IntersectionObserver' in window && statSection) {
+        const statsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+        statsObserver.observe(statSection);
+    } else {
+        startCounters();
+    }
 
     // Floating Scroll to Top Button
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
