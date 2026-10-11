@@ -1784,7 +1784,7 @@ html, body {
 
     .logo-text h1,
     .navbar.scrolled .logo-text h1 {
-        font-size: 1.25rem !important;
+        font-size: clamp(1.32rem, 4.2vw, 1.55rem) !important;
         font-weight: 800 !important;
         line-height: 1.1 !important;
         letter-spacing: 0.5px !important;
@@ -1803,7 +1803,7 @@ html, body {
     .logo-text span,
     .navbar.scrolled .logo-text span {
         display: block !important;
-        font-size: 0.72rem !important;
+        font-size: clamp(0.78rem, 2.5vw, 0.9rem) !important;
         font-weight: 700 !important;
         letter-spacing: 0.35px !important;
         margin-top: 2px !important;
@@ -2785,12 +2785,12 @@ html, body {
         padding: 3px;
     }
 
-    /* Noticeably bold, clean stacked logo text on small phones */
+    /* Noticeably bold, clean, and bigger stacked logo text on small phones */
     .logo-text h1,
     .navbar.scrolled .logo-text h1 {
-        font-size: 1.15rem !important;
+        font-size: clamp(1.24rem, 5.2vw, 1.4rem) !important;
         font-weight: 800 !important;
-        letter-spacing: 0.3px !important;
+        letter-spacing: 0.4px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -2801,9 +2801,10 @@ html, body {
     .logo-text span,
     .navbar.scrolled .logo-text span {
         display: block !important;
-        font-size: 0.66rem !important;
-        letter-spacing: 0.2px !important;
-        margin-top: 1px !important;
+        font-size: clamp(0.74rem, 2.9vw, 0.84rem) !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.3px !important;
+        margin-top: 2px !important;
     }
 
     .menu-toggle {
