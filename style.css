@@ -194,7 +194,7 @@ ul {
     background-color: var(--white);
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    padding: 6px;
+    padding: 2px;
 }
 
 .navbar.scrolled .logo-svg {
@@ -1812,7 +1812,7 @@ html, body {
     .logo-svg {
         width: 56px;
         height: 56px;
-        padding: 4px;
+        padding: 2px;
         flex-shrink: 0;
     }
     
