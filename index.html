@@ -28,15 +28,35 @@
                 </div>
             </a>
         </div>
+        <div class="nav-backdrop"></div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="nav-drawer-header">
+                <div class="nav-drawer-brand">
+                    <svg viewBox="-10 -10 240 240" class="nav-drawer-logo" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="40" y="30" width="28" height="135" fill="currentColor" />
+                        <path d="M 72 30 L 140 30 C 175 30 185 45 185 70 C 185 95 175 110 140 110 L 72 110 Z" fill="currentColor" />
+                        <path d="M 130 45 H 105 C 92 45 88 52 88 60 V 80 C 88 88 92 95 105 95 H 130 V 82 H 105 C 102 82 102 80 102 80 V 75 H 125 V 65 H 102 V 60 C 102 60 102 58 105 58 H 130 Z" fill="white" class="logo-e" />
+                        <text x="70" y="165" font-family="'Brush Script MT', cursive, sans-serif" font-size="55" font-weight="bold" fill="currentColor">rateesh</text>
+                    </svg>
+                    <div class="nav-drawer-brand-text">
+                        <h4>PRATEESH</h4>
+                        <span>ENGINEERING ENTERPRISES</span>
+                    </div>
+                </div>
+                <button class="nav-drawer-close" id="navDrawerClose" aria-label="Close navigation menu"><i class="fas fa-times"></i></button>
+            </li>
+            <li><a href="#home"><i class="fas fa-home"></i><span>Home</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i><span>About</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li><a href="#services"><i class="fas fa-cogs"></i><span>Services</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li><a href="#projects"><i class="fas fa-tasks"></i><span>Projects</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li><a href="#gallery"><i class="fas fa-images"></i><span>Gallery</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li><a href="#faq"><i class="fas fa-question-circle"></i><span>FAQ</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li><a href="#reviews"><i class="fas fa-star"></i><span>Reviews</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span><i class="fas fa-chevron-right nav-arrow"></i></a></li>
+            <li class="nav-drawer-footer">
+                <a href="tel:+919597000189" class="drawer-action-btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+                <a href="https://wa.me/919597000189" target="_blank" class="drawer-action-btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </li>
         </ul>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
@@ -45,15 +65,18 @@
 
     <header id="home" class="hero">
         <div class="hero-bg">
-            <video autoplay loop muted playsinline id="hero-video">
-                <source src="assets/welding-bg.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline id="hero-video" poster="photos/hero-image/hero-bg.jpg">
+                <source src="photos/hero-image/welding-bg.mp4" type="video/mp4">
             </video>
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-text-area">
                 <span class="hero-badge slide-up" style="background-color: var(--secondary); color: var(--white); padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; margin-bottom: 20px; display: inline-block;">ISO 9001:2015 CERTIFIED COMPANY</span>
-                <h2 class="slide-up">Excellence in <span style="white-space: nowrap;">Engineering & Fabrication</span></h2>
+                <h2 class="slide-up">Excellence in <span>Engineering & Fabrication</span></h2>
+                <div class="hero-mobile-media slide-up">
+                    <img src="photos/heavy-equipment-erection.jpg" alt="Heavy Equipment & Pressure Vessel Erection" class="hero-mobile-img" loading="eager">
+                </div>
                 <p class="fade-in hero-subtitle">Specialized in the complete manufacturing of heavy industrial Equipments, massive Storage Tanks, and high-pressure Vessels.</p>
                 <p class="fade-in hero-subtitle-small" style="font-size: 1.1rem; color: #dddddd; margin-bottom: 40px; max-width: 90%;">We are committed to providing dependable industrial engineering services through skilled manpower, professional execution, quality workmanship, and effective project management.</p>
                 <div class="hero-buttons fade-in-delayed">
@@ -83,14 +106,16 @@
 
     <section id="about" class="about-section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 50px;">
+            <div class="section-header center">
                 <h3 class="section-subtitle">About Us</h3>
                 <h2 class="section-title">Professionally Managed <span class="gradient-text">Mechanical Engineering</span> Experts</h2>
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Prateesh Engineering Enterprises is a professionally managed partnership company dealing with mechanical engineering, fabrication, and erection works in India & Abroad. We are promoted by well-experienced and technically qualified professionals.</p>
-                    <p>With an annual turnover exceeding Rs. 200 Millions, we have successfully earned the trust of a huge clientele by delivering quality assured production based on ISO quality certifications.</p>
+                    <div class="about-intro">
+                        <p>Prateesh Engineering Enterprises is a professionally managed partnership company dealing with mechanical engineering, fabrication, and erection works in India & Abroad. We are promoted by well-experienced and technically qualified professionals.</p>
+                        <p>With an annual turnover exceeding Rs. 200 Millions, we have successfully earned the trust of a huge clientele by delivering quality assured production based on ISO quality certifications.</p>
+                    </div>
                     
                     <div class="infrastructure">
                         <h4>Our Infrastructure</h4>
@@ -149,7 +174,7 @@
                         <p>We manufacture high-quality, large-scale Equipments, Storage Tanks, and Pressure Vessels designed for maximum durability and efficiency in demanding industrial environments.</p>
                         <div class="h-service-actions">
                             <a href="#contact" class="btn btn-secondary" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">Request Quote</a>
-                            <a href="#gallery" class="btn btn-primary">View Projects</a>
+                            <a href="#gallery" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +189,7 @@
                         <p>Complete execution of industrial piping networks, precise HVAC ducting, and heavy structural fabrication tailored to your specific project needs and layout.</p>
                         <div class="h-service-actions">
                             <a href="#contact" class="btn btn-secondary" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">Request Quote</a>
-                            <a href="#gallery" class="btn btn-primary">View Projects</a>
+                            <a href="#gallery" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -175,11 +200,11 @@
                         <img src="photos/gallery/erection/heavy-equipment-erection.jpg" alt="Heavy Equipment Erection">
                     </div>
                     <div class="h-service-content">
-                        <h3><i class="fa-solid fa-gears"></i> Heavy Equipment Erection</h3>
+                        <h3 class="service-title-centered"><i class="fa-solid fa-gears"></i> Heavy Equipment Erection</h3>
                         <p>Professional installation and safe erection of heavy industrial machinery, ensuring precise alignment, leveling, and secure mounting for diverse industrial sectors.</p>
                         <div class="h-service-actions">
                             <a href="#contact" class="btn btn-secondary" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">Request Quote</a>
-                            <a href="#gallery" class="btn btn-primary">View Projects</a>
+                            <a href="#gallery" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -190,11 +215,11 @@
                         <img src="photos/gallery/manpower/manpower-supply.jpg" alt="Man Power Supply Contractors">
                     </div>
                     <div class="h-service-content">
-                        <h3><i class="fa-solid fa-helmet-safety"></i> Man Power Supply Contractors</h3>
+                        <h3 class="service-title-centered"><i class="fa-solid fa-helmet-safety"></i> Man Power Supply Contractors</h3>
                         <p>Providing highly skilled and specialized engineering manpower, including certified welders, fitters, and QA/QC engineers for industrial shutdown and maintenance projects.</p>
                         <div class="h-service-actions">
                             <a href="#contact" class="btn btn-secondary" style="background: transparent; border: 1px solid var(--primary); color: var(--primary);">Request Quote</a>
-                            <a href="#gallery" class="btn btn-primary">View Projects</a>
+                            <a href="#gallery" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -315,11 +340,6 @@
                             <div class="showcase-item"><span><i class="fas fa-industry"></i></span><p>Manali Petrochemical Ltd. (MPL)</p></div>
                             <div class="showcase-item"><span><i class="fas fa-industry"></i></span><p>Tamilnadu Petroproducts Ltd. (TPL)</p></div>
                         </div>
-                        
-                        <div style="margin-top: 40px; padding: 25px; background: rgba(255,255,255,0.02); border-radius: 12px; border-left: 4px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                            <p style="color: var(--gray); line-height: 1.8; margin-bottom: 15px;">Our project experience demonstrates our capability to deliver quality engineering solutions with a strong focus on safety, reliability, timely execution, and client satisfaction.</p>
-                            <p style="color: var(--gray); line-height: 1.8;">We are committed to providing dependable industrial engineering services through skilled manpower, professional execution, quality workmanship, and effective project management.</p>
-                        </div>
                     </div>
             
                     <!-- Major Executed Projects (Old List) -->
@@ -360,14 +380,32 @@
                         </div>
                     </div>
 
-
-
                 </div>
             </div>
 
-            <div class="showcase-category agencies" style="margin-top: 20px; text-align: center;">
-                <h4 style="color: var(--text-main); margin-bottom: 15px; font-size: 1.2rem;">Approved By Inspecting Agencies:</h4>
-                <p style="color: var(--gray);">Projects Developments (India) Ltd | Engineers India Ltd | NTPC | H & G Ltd | Jacobs Engineering | L&T Engineering Services</p>
+            <div class="project-experience-card">
+                <p>Our project experience demonstrates our capability to deliver quality engineering solutions with a strong focus on safety, reliability, timely execution, and client satisfaction.</p>
+                <p>We are committed to providing dependable industrial engineering services through skilled manpower, professional execution, quality workmanship, and effective project management.</p>
+            </div>
+
+            <div class="showcase-category agencies">
+                <h4 class="agencies-title">Approved By Inspecting Agencies:</h4>
+                <div class="agencies-content">
+                    <div class="agencies-line">
+                        <span>Projects Developments (India) Ltd</span>
+                        <span class="agencies-sep">|</span>
+                        <span>Engineers India Ltd</span>
+                        <span class="agencies-sep">|</span>
+                        <span>NTPC</span>
+                    </div>
+                    <div class="agencies-line">
+                        <span>H & G Ltd</span>
+                        <span class="agencies-sep">|</span>
+                        <span>Jacobs Engineering</span>
+                        <span class="agencies-sep">|</span>
+                        <span>L&T Engineering Services</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -638,7 +676,7 @@
                 </div>
             </div>
             
-            <a href="https://maps.google.com" target="_blank" class="btn-leave-review">
+            <a href="https://www.google.com/search?q=prateesh+engineering+enterprises+cuddalore&sca_esv=f4023a036866ecd5&sxsrf=APpeQntCjEsfVux8wKHzkiDQ88dlDmpdkg%3A1791707765737&ei=dUrLas2nLMKahvcPoOScwQs&biw=1536&bih=730&oq=prat+engineering+cuddalore&gs_lp=Egxnd3Mtd2l6LXNlcnAiGnByYXQgZW5naW5lZXJpbmcgY3VkZGFsb3JlKggIABgIGAcYHjIIEAAYCBgHGB4yCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzIIEAAYgAQYogQyBRAAGO8FMgUQABjvBTIFEAAY7wUyBRAAGO8FSLIyUO0GWOcbcAF4AZABAJgBqwOgAfgMqgEHMC44LjQtMbABALgBAcgBAPgBAZgCB6ACvwnCAgoQABhHGNYEGLADwgIGEAAYBxgewgIIEAAYBRgHGB6YAwDiAwQYACBd4gMEGAAgXuIDBBgAIF_iAwQYACBg4gMEGAAgYeIDBBgAIGKIBgGQBgiSBwcxLjUuNC0xoAeHMbIHBzAuNS40LTG4B7sJwgcFMC4zLjTIBxeACAE&sclient=gws-wiz-serp" target="_blank" rel="noopener noreferrer" class="btn-leave-review">
                 <i class="fab fa-google"></i> Leave a Google Review
             </a>
         </div>
@@ -649,8 +687,20 @@
             <div class="contact-top-grid">
                 <!-- Left Info -->
                 <div class="contact-info-block">
-                    <span class="pill-tag">GET IN TOUCH</span>
-                    <h2>PRATEESH ENGINEERING ENTERPRISES</h2>
+                    <div class="contact-tag-wrapper">
+                        <span class="pill-tag">GET IN TOUCH</span>
+                    </div>
+                    <div class="footer-brand-logo">
+                        <svg viewBox="-10 -10 240 240" class="footer-logo-svg" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="30" width="28" height="135" fill="currentColor" />
+                            <path d="M 72 30 L 140 30 C 175 30 185 45 185 70 C 185 95 175 110 140 110 L 72 110 Z" fill="currentColor" />
+                            <path d="M 130 45 H 105 C 92 45 88 52 88 60 V 80 C 88 88 92 95 105 95 H 130 V 82 H 105 C 102 82 102 80 102 80 V 75 H 125 V 65 H 102 V 60 C 102 60 102 58 105 58 H 130 Z" fill="white" class="logo-e" />
+                            <text x="70" y="165" font-family="'Brush Script MT', cursive, sans-serif" font-size="55" font-weight="bold" fill="currentColor">rateesh</text>
+                        </svg>
+                        <div class="footer-brand-text">
+                            <h2>PRATEESH ENGINEERING ENTERPRISES</h2>
+                        </div>
+                    </div>
                     <p>Your trusted industrial partner for high-precision ducting, heavy tank manufacturing, structural erection, and ventilation engineering.</p>
                     
                     <div class="info-list">
@@ -704,9 +754,11 @@
                             <div class="info-text">
                                 <span class="label">WORK OFFICE</span>
                                 <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
-                                    <strong style="color: var(--text-main); font-weight: 700;">Prateesh Engineering</strong>
-                                    <span style="color: var(--text-main);">223/2B, Chidambaram Main Road, SIPCOT,</span>
-                                    <span style="color: var(--text-main);">Cuddalore - 607005.</span>
+                                    <strong style="color: var(--text-main); font-weight: 700;">Prateesh Engineering Enterprises</strong>
+                                    <strong style="color: var(--text-main); font-weight: 700; line-height: 1.5;">223/2B, Chidambaram Main Road, SIPCOT, Cuddalore - 607005.</strong>
+                                    <a href="https://www.google.com/maps?sca_esv=f4023a036866ecd5&sxsrf=APpeQntCjEsfVux8wKHzkiDQ88dlDmpdkg:1791707765737&biw=1536&bih=730&gs_lp=Egxnd3Mtd2l6LXNlcnAiGnByYXQgZW5naW5lZXJpbmcgY3VkZGFsb3JlKggIABgIGAcYHjIIEAAYCBgHGB4yCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzIIEAAYgAQYogQyBRAAGO8FMgUQABjvBTIFEAAY7wUyBRAAGO8FSLIyUO0GWOcbcAF4AZABAJgBqwOgAfgMqgEHMC44LjQtMbABALgBAcgBAPgBAZgCB6ACvwnCAgoQABhHGNYEGLADwgIGEAAYBxgewgIIEAAYBRgHGB6YAwDiAwQYACBd4gMEGAAgXuIDBBgAIF_iAwQYACBg4gMEGAAgYeIDBBgAIGKIBgGQBgiSBwcxLjUuNC0xoAeHMbIHBzAuNS40LTG4B7sJwgcFMC4zLjTIBxeACAE&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KRPoHG70l1Q6MT-H8J92oswT&daddr=No:+223/2B,+Chidambaram+Road,+Sipcot,+Pachchyankuppam,+Tamil+Nadu+607005" target="_blank" rel="noopener noreferrer" style="color: var(--secondary); font-size: 0.88rem; font-weight: 700; display: inline-flex; align-items: center; gap: 5px; margin-top: 4px; text-decoration: none; width: fit-content;">
+                                        <i class="fas fa-directions"></i> View on Map &rarr;
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -745,6 +797,9 @@
                             <i class="fas fa-map-marked-alt"></i> 
                             <h4>Chennai Head Office</h4>
                         </div>
+                        <a href="https://maps.google.com/?q=4/653+A,+Essaar+Plaza,+Medavakkam,+Chennai+-+600100" target="_blank" rel="noopener noreferrer" class="btn-outline-map">
+                            <i class="fas fa-directions"></i> View on Map
+                        </a>
                     </div>
                     <div class="map-iframe">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15554.407767851944!2d80.1774351!3d12.9248464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c3453b516b3%3A0x6b44a2c51086054!2sMedavakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -758,6 +813,9 @@
                             <i class="fas fa-industry"></i> 
                             <h4>Cuddalore Works (SIPCOT)</h4>
                         </div>
+                        <a href="https://www.google.com/maps?sca_esv=f4023a036866ecd5&sxsrf=APpeQntCjEsfVux8wKHzkiDQ88dlDmpdkg:1791707765737&biw=1536&bih=730&gs_lp=Egxnd3Mtd2l6LXNlcnAiGnByYXQgZW5naW5lZXJpbmcgY3VkZGFsb3JlKggIABgIGAcYHjIIEAAYCBgHGB4yCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzIIEAAYgAQYogQyBRAAGO8FMgUQABjvBTIFEAAY7wUyBRAAGO8FSLIyUO0GWOcbcAF4AZABAJgBqwOgAfgMqgEHMC44LjQtMbABALgBAcgBAPgBAZgCB6ACvwnCAgoQABhHGNYEGLADwgIGEAAYBxgewgIIEAAYBRgHGB6YAwDiAwQYACBd4gMEGAAgXuIDBBgAIF_iAwQYACBg4gMEGAAgYeIDBBgAIGKIBgGQBgiSBwcxLjUuNC0xoAeHMbIHBzAuNS40LTG4B7sJwgcFMC4zLjTIBxeACAE&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KRPoHG70l1Q6MT-H8J92oswT&daddr=No:+223/2B,+Chidambaram+Road,+Sipcot,+Pachchyankuppam,+Tamil+Nadu+607005" target="_blank" rel="noopener noreferrer" class="btn-outline-map">
+                            <i class="fas fa-directions"></i> View on Map
+                        </a>
                     </div>
                     <div class="map-iframe">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15632.744578149176!2d79.7428!3d11.6853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54a23b1234567%3A0x89abcdef1234567!2sSIPCOT%20Industrial%20Complex%2C%20Cuddalore!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -775,6 +833,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Action Buttons: Instant Call & Scroll to Top -->
+    <div class="floating-actions">
+        <a href="tel:+919597000189" class="floating-btn floating-call-btn" title="Call Office" aria-label="Call Office">
+            <i class="fas fa-phone-alt"></i>
+            <span class="floating-tooltip">Call Office</span>
+        </a>
+        <button id="scrollToTopBtn" class="floating-btn floating-scroll-btn" title="Scroll to Top" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+            <span class="floating-tooltip">Scroll to Top</span>
+        </button>
+    </div>
 
     <script src="script.js"></script>
 </body>

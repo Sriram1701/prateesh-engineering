@@ -47,28 +47,198 @@
             transform: scale(1.05);
         }
         .back-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             margin-top: 30px;
-            color: var(--primary);
+            color: #ffffff;
+            background: var(--secondary);
+            padding: 12px 28px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
+            transition: all 0.3s ease;
         }
         .back-btn:hover {
-            color: var(--secondary);
+            background: var(--secondary-hover);
+            transform: translateY(-2px);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 51, 204, 0.25);
+        }
+        /* Sleek, Compact Navbar for Gallery Page */
+        .navbar.gallery-navbar {
+            padding: 8px 24px !important;
+            top: 12px !important;
+            width: 96% !important;
+            max-width: 1280px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            border-radius: 50px !important;
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+            border: 1px solid rgba(0, 0, 0, 0.08) !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+        }
+        .gallery-navbar .logo-link {
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+        }
+        .gallery-navbar .logo-svg {
+            width: 44px !important;
+            height: 44px !important;
+            padding: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            flex-shrink: 0 !important;
+        }
+        .gallery-navbar .logo-text h1 {
+            font-size: 1.25rem !important;
+            font-weight: 800 !important;
+            color: #111111 !important;
+            letter-spacing: 0.5px !important;
+            margin: 0 !important;
+            line-height: 1.1 !important;
+            display: flex !important;
+            align-items: baseline !important;
+            gap: 6px !important;
+            white-space: nowrap !important;
+        }
+        .gallery-navbar .logo-text h1 span {
+            font-size: 0.82rem !important;
+            font-weight: 700 !important;
+            color: #111111 !important;
+            letter-spacing: 0.3px !important;
+            display: inline !important;
+            white-space: nowrap !important;
+        }
+        .gallery-navbar .nav-links {
+            position: static !important;
+            height: auto !important;
+            width: auto !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            margin: 0 !important;
+        }
+        .gallery-navbar .nav-links li {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .gallery-navbar .nav-links a {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            padding: 8px 18px !important;
+            border-radius: 50px !important;
+            background: #f8fafc !important;
+            color: #1e293b !important;
+            font-size: 0.88rem !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            border: 1px solid #e2e8f0 !important;
+            transition: all 0.25s ease !important;
+            transform: none !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+        }
+        .gallery-navbar .nav-links a i {
+            display: inline-block !important;
+            font-size: 0.82rem;
+            color: var(--primary);
+            transition: transform 0.2s ease;
+        }
+        .gallery-navbar .nav-links a:hover {
+            background: var(--primary) !important;
+            color: #ffffff !important;
+            border-color: var(--primary) !important;
+            box-shadow: 0 4px 14px rgba(255, 0, 0, 0.28) !important;
+            transform: translateY(-1px) !important;
+        }
+        .gallery-navbar .nav-links a:hover i {
+            color: #ffffff !important;
+            transform: translateX(-3px);
+        }
+        .gallery-navbar .nav-links a::after {
+            display: none !important;
+        }
+
+        .service-page-header {
+            padding: 95px 0 35px;
+            background-color: var(--bg-main);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .navbar.gallery-navbar {
+                padding: 6px 14px !important;
+                top: 8px !important;
+                width: 95% !important;
+                border-radius: 35px !important;
+            }
+            .gallery-navbar .logo-svg {
+                width: 38px !important;
+                height: 38px !important;
+            }
+            .gallery-navbar .logo-text h1 {
+                font-size: 1.12rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0 !important;
+                white-space: nowrap !important;
+                color: #111111 !important;
+                line-height: 1.1 !important;
+            }
+            .gallery-navbar .logo-text h1 span {
+                font-size: 0.66rem !important;
+                display: block !important;
+                color: #111111 !important;
+                white-space: nowrap !important;
+                margin-top: 1px !important;
+            }
+            .gallery-navbar .nav-links a {
+                padding: 6px 12px !important;
+                font-size: 0.8rem !important;
+                gap: 5px !important;
+            }
+            .service-page-header {
+                padding: 85px 16px 25px !important;
+            }
+            .service-page-header h1 {
+                font-size: 1.8rem;
+            }
+            .service-page-header p {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar scrolled">
+    <nav class="navbar scrolled gallery-navbar">
         <div class="logo">
             <a href="index.html" class="logo-link">
+                <svg viewBox="-10 -10 240 240" width="44" height="44" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <rect x="40" y="30" width="28" height="135" fill="currentColor" />
+                    <path d="M 72 30 L 140 30 C 175 30 185 45 185 70 C 185 95 175 110 140 110 L 72 110 Z" fill="currentColor" />
+                    <path d="M 130 45 H 105 C 92 45 88 52 88 60 V 80 C 88 88 92 95 105 95 H 130 V 82 H 105 C 102 82 102 80 102 80 V 75 H 125 V 65 H 102 V 60 C 102 60 102 58 105 58 H 130 Z" fill="white" class="logo-e" />
+                    <text x="70" y="165" font-family="'Brush Script MT', cursive, sans-serif" font-size="55" font-weight="bold" fill="currentColor">rateesh</text>
+                </svg>
                 <div class="logo-text">
                     <h1>PRATEESH <span>ENGINEERING ENTERPRISES</span></h1>
                 </div>
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Back to Home</a></li>
+            <li><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a></li>
         </ul>
     </nav>
 
@@ -84,6 +254,7 @@
         <div class="container">
             <h2 style="color: var(--text-main); padding-top: 40px; margin-bottom: 20px; text-align: center;">Project Gallery</h2>
             <div class="gallery-grid">
+                <div class="gallery-item"><img src="photos/gallery/erection/vessel-erection-cranes.jpg" alt="Heavy Vessel & Equipment Erection"></div>
                 <div class="gallery-item"><img src="photos/gallery/erection/heavy-equipment-erection.jpg" alt="Heavy Equipment Erection"></div>
                 <div class="gallery-item"><img src="photos/gallery/erection/structural-steel-tower.jpg" alt="Structural Steel Tower"></div>
                 <div class="gallery-item"><img src="photos/gallery/erection/chemplast-sanmar-plant.jpg" alt="Chemplast Sanmar Plant"></div>
@@ -121,5 +292,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Action Buttons: Instant Call & Scroll to Top -->
+    <div class="floating-actions">
+        <a href="tel:+919597000189" class="floating-btn floating-call-btn" title="Call Office" aria-label="Call Office">
+            <i class="fas fa-phone-alt"></i>
+            <span class="floating-tooltip">Call Office</span>
+        </a>
+        <button id="scrollToTopBtn" class="floating-btn floating-scroll-btn" title="Scroll to Top" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+            <span class="floating-tooltip">Scroll to Top</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
