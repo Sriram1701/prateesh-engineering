@@ -3,237 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Project Gallery | PRATEESH Engineering Enterprises</title>
+    <!-- Primary Meta Tags -->
+    <title>Full Project Gallery | Prateesh Engineering Enterprises</title>
+    <meta name="title" content="Full Project Gallery | Prateesh Engineering Enterprises">
+    <meta name="description" content="Explore project photographs of heavy equipment erection, high-pressure vessels, storage tanks, ducting, and piping systems executed by Prateesh Engineering Enterprises.">
+    <meta name="keywords" content="Prateesh Engineering gallery, mechanical engineering project photos, heavy equipment erection images, storage tank fabrication photos, industrial fabrication portfolio">
+    <meta name="author" content="Prateesh Engineering Enterprises">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Google & Google Gemini (Search & AI Overview) -->
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="google-extended" content="index, follow">
+
+    <!-- ChatGPT & OpenAI Crawlers (ChatGPT Search & GPTBot) -->
+    <meta name="gptbot" content="index, follow">
+    <meta name="oai-searchbot" content="index, follow">
+    <meta name="chatgpt-user" content="index, follow">
+
+    <!-- Yahoo & Bing Search -->
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="slurp" content="index, follow">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="Prateesh Engineering Enterprises">
+    <meta property="og:title" content="Full Project Gallery | Prateesh Engineering Enterprises">
+    <meta property="og:description" content="Explore photographs of industrial fabrication, heavy tank manufacturing, and equipment erection works.">
+    <meta property="og:image" content="photos/gallery/heavy-equipment-erection.jpg">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Full Project Gallery | Prateesh Engineering Enterprises">
+    <meta name="twitter:description" content="Explore photographs of industrial fabrication, heavy tank manufacturing, and equipment erection works.">
+    <meta name="twitter:image" content="photos/gallery/heavy-equipment-erection.jpg">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="photos/logo/prateesh-logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .service-page-header {
-            padding: 120px 0 40px;
-            background-color: var(--bg-main);
-            text-align: center;
-        }
-        .service-page-header h1 {
-            font-size: 3rem;
-            color: var(--text-main);
-            margin-bottom: 20px;
-        }
-        .service-page-header p {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
-            padding: 60px 0;
-            background-color: var(--dark-light);
-        }
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 30px;
-            color: #ffffff;
-            background: var(--secondary);
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .back-btn:hover {
-            background: var(--secondary-hover);
-            transform: translateY(-2px);
-            color: #ffffff;
-            box-shadow: 0 8px 20px rgba(0, 51, 204, 0.25);
-        }
-        /* Sleek, Defined Container Navbar for Gallery Page */
-        .navbar.gallery-navbar {
-            padding: 14px 32px !important;
-            top: 15px !important;
-            width: 96% !important;
-            max-width: 1320px !important;
-            left: 50% !important;
-            transform: translateX(-50%) !important;
-            border-radius: 50px !important;
-            background-color: rgba(255, 255, 255, 0.98) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
-            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-            border: 2px solid #111111 !important;
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-        }
-        .gallery-navbar .logo-link {
-            display: flex !important;
-            align-items: center !important;
-            gap: 10px !important;
-        }
-        .gallery-navbar .logo-img,
-        .gallery-navbar .logo-svg {
-            width: 60px !important;
-            height: 60px !important;
-            aspect-ratio: 1 / 1 !important;
-            object-fit: contain !important;
-            border-radius: 0 !important;
-            padding: 0 !important;
-            background: transparent !important;
-            box-shadow: none !important;
-            border: none !important;
-            flex-shrink: 0 !important;
-        }
-        .gallery-navbar .logo-text h1 {
-            font-size: 1.25rem !important;
-            font-weight: 800 !important;
-            color: #111111 !important;
-            letter-spacing: 0.5px !important;
-            margin: 0 !important;
-            line-height: 1.1 !important;
-            display: flex !important;
-            align-items: baseline !important;
-            gap: 8px !important;
-            white-space: nowrap !important;
-        }
-        .gallery-navbar .logo-text h1 span {
-            font-size: 1.25rem !important;
-            font-weight: 800 !important;
-            color: #111111 !important;
-            letter-spacing: 0.5px !important;
-            display: inline !important;
-            white-space: nowrap !important;
-        }
-        .gallery-navbar .nav-links {
-            position: static !important;
-            height: auto !important;
-            width: auto !important;
-            background: transparent !important;
-            box-shadow: none !important;
-            border: none !important;
-            padding: 0 !important;
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            margin: 0 !important;
-        }
-        .gallery-navbar .nav-links li {
-            list-style: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        .gallery-navbar .nav-links a {
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 8px !important;
-            padding: 8px 18px !important;
-            border-radius: 50px !important;
-            background: #f8fafc !important;
-            color: #1e293b !important;
-            font-size: 0.88rem !important;
-            font-weight: 700 !important;
-            text-decoration: none !important;
-            border: 1px solid #e2e8f0 !important;
-            transition: all 0.25s ease !important;
-            transform: none !important;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
-        }
-        .gallery-navbar .nav-links a i {
-            display: inline-block !important;
-            font-size: 0.82rem;
-            color: var(--primary);
-            transition: transform 0.2s ease;
-        }
-        .gallery-navbar .nav-links a:hover {
-            background: var(--primary) !important;
-            color: #ffffff !important;
-            border-color: var(--primary) !important;
-            box-shadow: 0 4px 14px rgba(255, 0, 0, 0.28) !important;
-            transform: translateY(-1px) !important;
-        }
-        .gallery-navbar .nav-links a:hover i {
-            color: #ffffff !important;
-            transform: translateX(-3px);
-        }
-        .gallery-navbar .nav-links a::after {
-            display: none !important;
-        }
-
-        .service-page-header {
-            padding: 95px 0 35px;
-            background-color: var(--bg-main);
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .navbar.gallery-navbar {
-                padding: 6px 14px !important;
-                top: 8px !important;
-                width: 95% !important;
-                border-radius: 35px !important;
-            }
-            .gallery-navbar .logo-img,
-            .gallery-navbar .logo-svg {
-                width: 48px !important;
-                height: 48px !important;
-                border-radius: 0 !important;
-                background: transparent !important;
-            }
-            .gallery-navbar .logo-text h1 {
-                font-size: clamp(1.24rem, 5.2vw, 1.4rem) !important;
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 0 !important;
-                white-space: nowrap !important;
-                color: #111111 !important;
-                line-height: 1.1 !important;
-                letter-spacing: 0.4px !important;
-                font-weight: 800 !important;
-            }
-            .gallery-navbar .logo-text h1 span {
-                font-size: clamp(0.92rem, 3.1vw, 1.05rem) !important;
-                display: block !important;
-                color: #111111 !important;
-                white-space: nowrap !important;
-                margin-top: 3px !important;
-                font-weight: 800 !important;
-                letter-spacing: 0.4px !important;
-            }
-            .gallery-navbar .nav-links a {
-                padding: 6px 12px !important;
-                font-size: 0.8rem !important;
-                gap: 5px !important;
-            }
-            .service-page-header {
-                padding: 85px 16px 25px !important;
-            }
-            .service-page-header h1 {
-                font-size: 1.8rem;
-            }
-            .service-page-header p {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar scrolled gallery-navbar">
@@ -241,7 +49,7 @@
             <a href="index.html" class="logo-link">
                 <img src="photos/logo/prateesh-logo.png" alt="Prateesh Engineering Enterprises" class="logo-img">
                 <div class="logo-text">
-                    <h1>PRATEESH <span>ENGINEERING ENTERPRISES</span></h1>
+                    <span class="logo-heading">PRATEESH <span>ENGINEERING ENTERPRISES</span></span>
                 </div>
             </a>
         </div>
@@ -258,45 +66,44 @@
         </div>
     </div>
 
-    <div class="gallery-grid-wrapper" style="background-color: var(--dark-light);">
+    <div class="gallery-grid-wrapper">
         <div class="container">
-            <h2 style="color: var(--text-main); padding-top: 40px; margin-bottom: 20px; text-align: center;">Project Gallery</h2>
+            <h2 class="gallery-full-heading">Project Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="photos/gallery/erection/vessel-erection-cranes.jpg" alt="Heavy Vessel & Equipment Erection"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/heavy-equipment-erection.jpg" alt="Heavy Equipment Erection"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/structural-steel-tower.jpg" alt="Structural Steel Tower"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/chemplast-sanmar-plant.jpg" alt="Chemplast Sanmar Plant"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/industrial-equipment.jpg" alt="Industrial Equipment"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/site-work-01.jpg" alt="Site Work 1"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/site-work-02.jpg" alt="Site Work 2"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/equipment-maintenance.jpg" alt="Equipment Maintenance"></div>
-                <div class="gallery-item"><img src="photos/gallery/erection/mechanical-stress-analysis.png" alt="Mechanical Stress Analysis"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/pipe-fabrication-01.jpg" alt="Pipe Fabrication"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/industrial-ducting.jpg" alt="Industrial Ducting"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/welding-work.jpg" alt="Welding Works"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/metal-grinding-work.jpg" alt="Metal Grinding"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/structural-steel-fabrication.jpg" alt="Structural Steel Fabrication"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/pipeline-erection.png" alt="Pipeline Erection"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/exhaust-ventilation-system.jpg" alt="Exhaust Ventilation System"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/industrial-piping-network.jpg" alt="Industrial Piping Network"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/piping-installation.jpg" alt="Piping Installation"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/piping-fabricator.png" alt="Piping Fabricator"></div>
-                <div class="gallery-item"><img src="photos/gallery/fabrication/heavy-fabrication-01.png" alt="Heavy Fabrication"></div>
-                <div class="gallery-item"><img src="photos/gallery/manpower/manpower-services.jpg" alt="Manpower Services"></div>
-                <div class="gallery-item"><img src="photos/gallery/manpower/manpower-supply.jpg" alt="Manpower Supply"></div>
-                <div class="gallery-item"><img src="photos/gallery/tanks/storage-tank-1500kl.jpg" alt="Storage Tank 1500KL"></div>
-                <div class="gallery-item"><img src="photos/gallery/tanks/pressure-vessel-fabrication.jpg" alt="Pressure Vessel Fabrication"></div>
-                <div class="gallery-item"><img src="photos/gallery/tanks/pressure-vessel-work.jpg" alt="Pressure Vessel Work"></div>
-                <div class="gallery-item"><img src="photos/gallery/tanks/tank-engineering-design.webp" alt="Tank Engineering Design"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/vessel-erection-cranes.jpg" alt="Heavy Vessel & Equipment Erection" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/heavy-equipment-erection.jpg" alt="Heavy Equipment Erection" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/structural-steel-tower.jpg" alt="Structural Steel Tower" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/chemplast-sanmar-plant.jpg" alt="Chemplast Sanmar Plant" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/industrial-equipment.jpg" alt="Industrial Equipment" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/site-work-01.jpg" alt="Site Work 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/site-work-02.jpg" alt="Site Work 2" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/equipment-maintenance.jpg" alt="Equipment Maintenance" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/erection/mechanical-stress-analysis.png" alt="Mechanical Stress Analysis" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/pipe-fabrication-01.jpg" alt="Pipe Fabrication" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/industrial-ducting.jpg" alt="Industrial Ducting" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/welding-work.jpg" alt="Welding Works" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/metal-grinding-work.jpg" alt="Metal Grinding" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/structural-steel-fabrication.jpg" alt="Structural Steel Fabrication" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/pipeline-erection.png" alt="Pipeline Erection" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/exhaust-ventilation-system.jpg" alt="Exhaust Ventilation System" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/industrial-piping-network.jpg" alt="Industrial Piping Network" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/piping-installation.jpg" alt="Piping Installation" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/piping-fabricator.png" alt="Piping Fabricator" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/fabrication/heavy-fabrication-01.png" alt="Heavy Fabrication" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/manpower/manpower-services.jpg" alt="Manpower Services" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/manpower/manpower-supply.jpg" alt="Manpower Supply" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/storage-tank-1500kl.jpg" alt="Storage Tank 1500KL" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/pressure-vessel-fabrication.jpg" alt="Pressure Vessel Fabrication" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/pressure-vessel-work.jpg" alt="Pressure Vessel Work" loading="lazy"></div>
+                <div class="gallery-item"><img src="photos/gallery/tanks/tank-engineering-design.webp" alt="Tank Engineering Design" loading="lazy"></div>
             </div>
-        </div>
         </div>
     </div>
 
-    <footer class="bottom-copyright" style="background-color: var(--dark); padding: 30px 0;">
+    <footer class="bottom-copyright">
         <div class="container">
-            <div class="copyright-content" style="display: flex; justify-content: space-between; color: #94a3b8;">
-                <p>&copy; 2026 PRATEESH Engineering Enterprises.</p>
+            <div class="copyright-content">
+                <p>&copy; 2026 Prateesh Engineering Enterprises. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -313,6 +120,6 @@
         </button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

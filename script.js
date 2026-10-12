@@ -1,48 +1,95 @@
+/**
+ * PRATEESH ENGINEERING ENTERPRISES - SCRIPT
+ * 
+ * Clean, modular script organized strictly by sequential page layout:
+ * 1. Global Setup & Performance Optimization
+ * 2. Navigation Bar & Mobile Drawer Menu
+ * 3. Hero Section (Video playback & Animated Stats Counters)
+ * 4. Services Section (Scroll Reveal Animations)
+ * 5. FAQ Section (Accordion)
+ * 6. Reviews Section (Client Testimonials Slider & Dots)
+ * 7. Contact Section (Quote & Contact Form Handler)
+ * 8. Footer & Floating Action Buttons (Scroll-to-top)
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
+    /* ==========================================================================
+       1. GLOBAL SETUP & PERFORMANCE OPTIMIZATION
+       ========================================================================== */
+    // Mark JS enabled for progressive enhancement animations
+    document.documentElement.classList.add('js-enabled');
+
+    // Throttled scroll runner using requestAnimationFrame for 60fps performance
+    let isScrolling = false;
+    const scrollCallbacks = [];
+
+    const registerScrollCallback = (fn) => {
+        scrollCallbacks.push(fn);
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                const scrollY = window.scrollY || window.pageYOffset;
+                for (let i = 0; i < scrollCallbacks.length; i++) {
+                    scrollCallbacks[i](scrollY);
+                }
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    }, { passive: true });
+
+    /* ==========================================================================
+       2. NAVIGATION BAR & MOBILE DRAWER MENU
+       ========================================================================== */
     const navbar = document.querySelector('.navbar');
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
-    // Ensure hero video plays immediately without delay
-    const heroVideo = document.getElementById('hero-video');
-    if (heroVideo) {
-        heroVideo.play().catch(() => {});
-    }
-    
-    // Navbar scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
     const navBackdrop = document.querySelector('.nav-backdrop');
-    
-    // Mobile menu toggle functions
+    const navDrawerClose = document.getElementById('navDrawerClose');
+    const navAnchorLinks = document.querySelectorAll('.nav-links a');
+
+    // Navbar Scrolled Glassmorphism State
+    if (navbar) {
+        registerScrollCallback((scrollY) => {
+            if (scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // Mobile Menu Drawer Control
     const closeMenu = () => {
-        navbar.classList.remove('menu-open');
-        navLinks.classList.remove('active');
+        if (navbar) navbar.classList.remove('menu-open');
+        if (navLinks) navLinks.classList.remove('active');
         if (navBackdrop) navBackdrop.classList.remove('active');
-        menuToggle.classList.remove('active');
-        const icon = menuToggle.querySelector('i');
-        if (icon) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+        if (menuToggle) {
+            menuToggle.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
         document.body.style.overflow = '';
     };
 
     const openMenu = () => {
-        navbar.classList.add('menu-open');
-        navLinks.classList.add('active');
+        if (navbar) navbar.classList.add('menu-open');
+        if (navLinks) navLinks.classList.add('active');
         if (navBackdrop) navBackdrop.classList.add('active');
-        menuToggle.classList.add('active');
-        const icon = menuToggle.querySelector('i');
-        if (icon) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+        if (menuToggle) {
+            menuToggle.classList.add('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
         }
         document.body.style.overflow = 'hidden';
     };
@@ -50,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle) {
         menuToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            if (navLinks.classList.contains('active')) {
+            if (navLinks && navLinks.classList.contains('active')) {
                 closeMenu();
             } else {
                 openMenu();
@@ -62,127 +109,34 @@ document.addEventListener('DOMContentLoaded', () => {
         navBackdrop.addEventListener('click', closeMenu);
     }
 
+    if (navDrawerClose) {
+        navDrawerClose.addEventListener('click', closeMenu);
+    }
+
     // Close menu when tapping anywhere outside the drawer
     document.addEventListener('click', (e) => {
         if (navLinks && navLinks.classList.contains('active')) {
-            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            if (!navLinks.contains(e.target) && menuToggle && !menuToggle.contains(e.target)) {
                 closeMenu();
             }
         }
     });
 
-    const navDrawerClose = document.getElementById('navDrawerClose');
-    if (navDrawerClose) {
-        navDrawerClose.addEventListener('click', closeMenu);
-    }
-
-    // Close mobile menu when a link is clicked
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
+    // Close mobile menu when any navigation link is clicked
+    navAnchorLinks.forEach((link) => {
         link.addEventListener('click', closeMenu);
     });
 
-    // Form submit button interaction
-    const submitBtn = document.querySelector('.btn-submit');
-    if (submitBtn) {
-        submitBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const originalText = submitBtn.innerText;
-            submitBtn.innerText = 'Sending...';
-            submitBtn.style.opacity = '0.8';
-            
-            // Simulate form submission
-            setTimeout(() => {
-                submitBtn.innerText = 'Message Sent!';
-                submitBtn.style.backgroundColor = '#10B981'; // Success green
-                submitBtn.style.opacity = '1';
-                
-                setTimeout(() => {
-                    submitBtn.innerText = originalText;
-                    submitBtn.style.backgroundColor = '';
-                    const form = document.querySelector('.contact-form');
-                    if (form) form.reset();
-                }, 3000);
-            }, 1500);
-        });
+    /* ==========================================================================
+       3. HERO SECTION (Video Playback & Animated Stats Counter)
+       ========================================================================== */
+    // Ensure Hero Video starts immediately without blocking
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+        heroVideo.play().catch(() => {});
     }
 
-    // FAQ Accordion
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            // Toggle current
-            question.classList.toggle('active');
-            
-            // Close others
-            faqQuestions.forEach(other => {
-                if (other !== question && other.classList.contains('active')) {
-                    other.classList.remove('active');
-                }
-            });
-        });
-    });
-
-    // Review Slider
-    const reviewCards = document.querySelectorAll('.review-card');
-    const dots = document.querySelectorAll('.slider-dots .dot');
-    let currentSlide = 0;
-    let slideInterval;
-
-    function showSlide(index) {
-        reviewCards.forEach(card => card.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        reviewCards[index].classList.add('active');
-        dots[index].classList.add('active');
-        currentSlide = index;
-    }
-
-    function nextSlide() {
-        let next = (currentSlide + 1) % reviewCards.length;
-        showSlide(next);
-    }
-
-    if (reviewCards.length > 0) {
-        // Auto slide
-        slideInterval = setInterval(nextSlide, 5000);
-        
-        // Dot click
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                showSlide(index);
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-        });
-    }
-
-    // Add js-enabled class to document root for progressive enhancement animations
-    document.documentElement.classList.add('js-enabled');
-
-    // Smooth Scroll Reveal Animation for Service Cards
-    const serviceCards = document.querySelectorAll('.horizontal-service-card');
-    if ('IntersectionObserver' in window && serviceCards.length > 0) {
-        const serviceObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('card-loaded');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
-        });
-
-        serviceCards.forEach(card => {
-            serviceObserver.observe(card);
-        });
-    } else {
-        serviceCards.forEach(card => card.classList.add('card-loaded'));
-    }
-
-    // Number Counter Animation for Hero Stats (triggers on scroll when viewed)
+    // Number Counter Animation for Hero Stats
     const statSection = document.querySelector('.hero-stats');
     const counters = document.querySelectorAll('.counter');
     let countersStarted = false;
@@ -191,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (countersStarted) return;
         countersStarted = true;
 
-        counters.forEach(counter => {
+        counters.forEach((counter) => {
             const target = +counter.getAttribute('data-target') || 0;
             const duration = 1600; // 1.6s smooth easing
             const startTime = performance.now();
@@ -199,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const updateCount = (currentTime) => {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                // Ease out cubic
+                // Ease-out cubic curve
                 const easeOut = 1 - Math.pow(1 - progress, 3);
                 const currentVal = Math.floor(easeOut * target);
 
@@ -218,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if ('IntersectionObserver' in window && statSection) {
         const statsObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     startCounters();
                     observer.unobserve(entry.target);
@@ -231,11 +185,121 @@ document.addEventListener('DOMContentLoaded', () => {
         startCounters();
     }
 
-    // Floating Scroll to Top Button
+    /* ==========================================================================
+       4. SERVICES SECTION (Scroll Reveal Animations)
+       ========================================================================== */
+    const serviceCards = document.querySelectorAll('.horizontal-service-card');
+    if ('IntersectionObserver' in window && serviceCards.length > 0) {
+        const serviceObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('card-loaded');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        serviceCards.forEach((card) => {
+            serviceObserver.observe(card);
+        });
+    } else {
+        serviceCards.forEach((card) => {
+            card.classList.add('card-loaded');
+        });
+    }
+
+    /* ==========================================================================
+       5. FAQ SECTION (Accordion Interactions)
+       ========================================================================== */
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach((question) => {
+        question.addEventListener('click', () => {
+            const isActive = question.classList.contains('active');
+
+            // Close all items
+            faqQuestions.forEach((other) => {
+                other.classList.remove('active');
+            });
+
+            // Toggle selected item
+            if (!isActive) {
+                question.classList.add('active');
+            }
+        });
+    });
+
+    /* ==========================================================================
+       6. REVIEWS SECTION (Testimonial Slider & Dots)
+       ========================================================================== */
+    const reviewCards = document.querySelectorAll('.review-card');
+    const dots = document.querySelectorAll('.slider-dots .dot');
+    let currentSlide = 0;
+    let slideInterval = null;
+
+    const showSlide = (index) => {
+        if (!reviewCards.length) return;
+        reviewCards.forEach((card) => card.classList.remove('active'));
+        dots.forEach((dot) => dot.classList.remove('active'));
+
+        currentSlide = (index + reviewCards.length) % reviewCards.length;
+        if (reviewCards[currentSlide]) reviewCards[currentSlide].classList.add('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+    };
+
+    const nextSlide = () => {
+        showSlide(currentSlide + 1);
+    };
+
+    if (reviewCards.length > 0) {
+        slideInterval = setInterval(nextSlide, 5000);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(index);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
+    }
+
+    /* ==========================================================================
+       7. CONTACT SECTION (Form Submission Feedback)
+       ========================================================================== */
+    const submitBtn = document.querySelector('.btn-submit');
+    const contactForm = document.querySelector('.contact-form');
+
+    if (submitBtn) {
+        submitBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.classList.add('submitting');
+
+            // Simulate form submission feedback
+            setTimeout(() => {
+                submitBtn.innerText = 'Message Sent!';
+                submitBtn.classList.remove('submitting');
+                submitBtn.classList.add('sent-success');
+
+                setTimeout(() => {
+                    submitBtn.innerText = originalText;
+                    submitBtn.classList.remove('sent-success');
+                    if (contactForm) contactForm.reset();
+                }, 3000);
+            }, 1200);
+        });
+    }
+
+    /* ==========================================================================
+       8. FOOTER & FLOATING SCROLL-TO-TOP BUTTON
+       ========================================================================== */
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
     if (scrollToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 250) {
+        registerScrollCallback((scrollY) => {
+            if (scrollY > 250) {
                 scrollToTopBtn.classList.add('visible');
             } else {
                 scrollToTopBtn.classList.remove('visible');
