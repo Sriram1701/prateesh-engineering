@@ -186,28 +186,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       4. SERVICES SECTION (Scroll Reveal Animations)
+       4. SCROLL REVEAL & TEXT ANIMATIONS
        ========================================================================== */
-    const serviceCards = document.querySelectorAll('.horizontal-service-card');
-    if ('IntersectionObserver' in window && serviceCards.length > 0) {
-        const serviceObserver = new IntersectionObserver((entries, observer) => {
+    const revealSelectors = [
+        '.section-header',
+        '.about-intro',
+        '.infrastructure',
+        '.about-right',
+        '.stat-card',
+        '.horizontal-service-card',
+        '.marquee-wrapper',
+        '.project-card',
+        '.all-works-title',
+        '.showcase-category',
+        '.project-experience-card',
+        '.agencies',
+        '.gallery-item',
+        '.gallery-cta-wrapper',
+        '.advantage-card',
+        '.faq-item',
+        '.review-slider-container',
+        '.btn-leave-review',
+        '.contact-info-block',
+        '.contact-form-block',
+        '.map-card',
+        '.service-page-header',
+        '.gallery-full-heading'
+    ];
+
+    const revealElements = document.querySelectorAll(revealSelectors.join(', '));
+    revealElements.forEach((el) => {
+        el.classList.add('reveal');
+    });
+
+    if ('IntersectionObserver' in window && revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('card-loaded');
+                    entry.target.classList.add('is-revealed');
                     observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
         });
 
-        serviceCards.forEach((card) => {
-            serviceObserver.observe(card);
+        revealElements.forEach((el) => {
+            revealObserver.observe(el);
         });
     } else {
-        serviceCards.forEach((card) => {
-            card.classList.add('card-loaded');
+        revealElements.forEach((el) => {
+            el.classList.add('is-revealed');
         });
     }
 

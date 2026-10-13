@@ -80,6 +80,9 @@
       }
     }
     </script>
+    <script>document.documentElement.classList.add('js-enabled');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="photos/logo/prateesh-logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
@@ -128,7 +131,7 @@
 
     <header id="home" class="hero">
         <div class="hero-bg">
-            <video autoplay loop muted playsinline preload="auto" id="hero-video">
+            <video autoplay loop muted playsinline preload="metadata" poster="photos/hero-image/hero-bg.jpg" id="hero-video">
                 <source src="photos/hero-image/welding-bg.mp4" type="video/mp4">
             </video>
         </div>
@@ -138,7 +141,7 @@
                 <span class="hero-badge slide-up">ISO 9001:2015 CERTIFIED COMPANY</span>
                 <h2 class="slide-up">Excellence in <span>Engineering & Fabrication</span></h2>
                 <div class="hero-mobile-media slide-up">
-                    <img src="photos/gallery/heavy-equipment-erection.jpg" alt="Heavy Equipment & Pressure Vessel Erection" class="hero-mobile-img" loading="eager">
+                    <img src="photos/gallery/heavy-equipment-erection.jpg" alt="Heavy Equipment & Pressure Vessel Erection" class="hero-mobile-img" loading="eager" decoding="async">
                 </div>
                 <p class="fade-in hero-subtitle">Specialized in the complete manufacturing of heavy industrial Equipments, massive Storage Tanks, and high-pressure Vessels.</p>
                 <p class="fade-in hero-subtitle-small">We are committed to providing dependable industrial engineering services through skilled manpower, professional execution, quality workmanship, and effective project management.</p>
@@ -189,7 +192,7 @@
                     </div>
                 </div>
                 <div class="about-right">
-                    <img src="photos/gallery/about-us.jpeg" alt="About Us" class="about-us-img">
+                    <img src="photos/gallery/about-us.jpeg" alt="About Us" class="about-us-img" loading="lazy" decoding="async">
                     <div class="about-stats">
                     <div class="stat-card">
                         <i class="fas fa-industry"></i>
@@ -230,7 +233,7 @@
                 <!-- Service 1 -->
                 <div class="horizontal-service-card">
                     <div class="h-service-img">
-                        <img src="photos/gallery/tanks/storage-tank-1500kl.jpg" alt="Equipments, Tanks & Pressure Vessels">
+                        <img src="photos/gallery/tanks/storage-tank-1500kl.jpg" alt="Equipments, Tanks & Pressure Vessels" loading="lazy" decoding="async">
                     </div>
                     <div class="h-service-content">
                         <h3><i class="fa-solid fa-industry"></i> Equipments, Tanks & Pressure Vessels</h3>
@@ -245,7 +248,7 @@
                 <!-- Service 2 -->
                 <div class="horizontal-service-card reverse">
                     <div class="h-service-img">
-                        <img src="photos/gallery/fabrication/pipe-fabrication-01.jpg" alt="Fabrication of Piping & Ducting">
+                        <img src="photos/gallery/fabrication/pipe-fabrication-01.jpg" alt="Fabrication of Piping & Ducting" loading="lazy" decoding="async">
                     </div>
                     <div class="h-service-content">
                         <h3><i class="fa-solid fa-screwdriver-wrench"></i> Fabrication of Piping, Ducting, Structurals</h3>
@@ -260,7 +263,7 @@
                 <!-- Service 3 -->
                 <div class="horizontal-service-card">
                     <div class="h-service-img">
-                        <img src="photos/gallery/erection/heavy-equipment-erection.jpg" alt="Heavy Equipment Erection">
+                        <img src="photos/gallery/erection/heavy-equipment-erection.jpg" alt="Heavy Equipment Erection" loading="lazy" decoding="async">
                     </div>
                     <div class="h-service-content">
                         <h3 class="service-title-centered"><i class="fa-solid fa-gears"></i> Heavy Equipment Erection</h3>
@@ -275,7 +278,7 @@
                 <!-- Service 4 -->
                 <div class="horizontal-service-card reverse">
                     <div class="h-service-img">
-                        <img src="photos/gallery/manpower/manpower-supply.jpg" alt="Man Power Supply Contractors">
+                        <img src="photos/gallery/manpower/manpower-supply.jpg" alt="Man Power Supply Contractors" loading="lazy" decoding="async">
                     </div>
                     <div class="h-service-content">
                         <h3 class="service-title-centered"><i class="fa-solid fa-helmet-safety"></i> Man Power Supply Contractors</h3>
@@ -300,36 +303,36 @@
                 <div class="clients-marquee marquee-left">
                     <!-- Row 1: Sliding Left -->
                     <div class="marquee-track">
-                        <img src="photos/brand-logo/l-and-t.jpg" alt="L&T" class="client-logo-img">
-                        <img src="photos/brand-logo/chemplast.jpg" alt="Chemplast" class="client-logo-img">
-                        <img src="photos/brand-logo/tata-steel.jpg" alt="Tata Steel" class="client-logo-img">
-                        <img src="photos/brand-logo/hyundai.png" alt="Hyundai" class="client-logo-img">
-                        <img src="photos/brand-logo/ramco.jpg" alt="Ramco" class="client-logo-img">
-                        <img src="photos/brand-logo/brand1.jpg" alt="NLC" class="client-logo-img nlc-logo">
+                        <img src="photos/brand-logo/l-and-t.jpg" alt="L&T" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/chemplast.jpg" alt="Chemplast" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/tata-steel.jpg" alt="Tata Steel" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/hyundai.png" alt="Hyundai" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/ramco.jpg" alt="Ramco" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/brand1.jpg" alt="NLC" class="client-logo-img nlc-logo" loading="lazy" decoding="async">
                         <!-- Duplicate for infinite effect -->
-                        <img src="photos/brand-logo/l-and-t.jpg" alt="L&T" class="client-logo-img">
-                        <img src="photos/brand-logo/chemplast.jpg" alt="Chemplast" class="client-logo-img">
-                        <img src="photos/brand-logo/tata-steel.jpg" alt="Tata Steel" class="client-logo-img">
-                        <img src="photos/brand-logo/hyundai.png" alt="Hyundai" class="client-logo-img">
-                        <img src="photos/brand-logo/ramco.jpg" alt="Ramco" class="client-logo-img">
-                        <img src="photos/brand-logo/brand1.jpg" alt="NLC" class="client-logo-img nlc-logo">
+                        <img src="photos/brand-logo/l-and-t.jpg" alt="L&T" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/chemplast.jpg" alt="Chemplast" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/tata-steel.jpg" alt="Tata Steel" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/hyundai.png" alt="Hyundai" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/ramco.jpg" alt="Ramco" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/brand1.jpg" alt="NLC" class="client-logo-img nlc-logo" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <div class="clients-marquee marquee-right">
                     <!-- Row 2: Sliding Right -->
                     <div class="marquee-track reverse">
-                        <img src="photos/brand-logo/saint-gobain.png" alt="Saint Gobain" class="client-logo-img">
-                        <img src="photos/brand-logo/spic.webp" alt="SPIC" class="client-logo-img">
-                        <img src="photos/brand-logo/sail.png" alt="SAIL" class="client-logo-img">
-                        <img src="photos/brand-logo/kansai.webp" alt="Kansai" class="client-logo-img">
-                        <img src="photos/brand-logo/brand2.png" alt="Brand 2" class="client-logo-img">
+                        <img src="photos/brand-logo/saint-gobain.png" alt="Saint Gobain" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/spic.webp" alt="SPIC" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/sail.png" alt="SAIL" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/kansai.webp" alt="Kansai" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/brand2.png" alt="Brand 2" class="client-logo-img" loading="lazy" decoding="async">
                         <!-- Duplicate for infinite effect -->
-                        <img src="photos/brand-logo/saint-gobain.png" alt="Saint Gobain" class="client-logo-img">
-                        <img src="photos/brand-logo/spic.webp" alt="SPIC" class="client-logo-img">
-                        <img src="photos/brand-logo/sail.png" alt="SAIL" class="client-logo-img">
-                        <img src="photos/brand-logo/kansai.webp" alt="Kansai" class="client-logo-img">
-                        <img src="photos/brand-logo/brand2.png" alt="Brand 2" class="client-logo-img">
+                        <img src="photos/brand-logo/saint-gobain.png" alt="Saint Gobain" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/spic.webp" alt="SPIC" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/sail.png" alt="SAIL" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/kansai.webp" alt="Kansai" class="client-logo-img" loading="lazy" decoding="async">
+                        <img src="photos/brand-logo/brand2.png" alt="Brand 2" class="client-logo-img" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
@@ -483,51 +486,51 @@
             <h2 class="section-title">Project Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="photos/gallery/heavy-erection.jpg" alt="Heavy Equipment Erection">
+                    <img src="photos/gallery/heavy-erection.jpg" alt="Heavy Equipment Erection" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Heavy Erection</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/structural-fabrication.jpg" alt="Pipe Fabrication">
+                    <img src="photos/gallery/structural-fabrication.jpg" alt="Pipe Fabrication" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Pipe Fabrication</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/tanks-vessels.jpg" alt="Storage Tank">
+                    <img src="photos/gallery/tanks-vessels.jpg" alt="Storage Tank" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Storage Tanks</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/fabrication/industrial-ducting.jpg" alt="Industrial Ducting">
+                    <img src="photos/gallery/fabrication/industrial-ducting.jpg" alt="Industrial Ducting" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Industrial Ducting</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/fabrication/welding-work.jpg" alt="Welding Works">
+                    <img src="photos/gallery/fabrication/welding-work.jpg" alt="Welding Works" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Precision Welding</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/fabrication/metal-grinding-work.jpg" alt="Metal Grinding">
+                    <img src="photos/gallery/fabrication/metal-grinding-work.jpg" alt="Metal Grinding" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Metal Finishing</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/fabrication/structural-steel-fabrication.jpg" alt="Structural Steel Fabrication">
+                    <img src="photos/gallery/fabrication/structural-steel-fabrication.jpg" alt="Structural Steel Fabrication" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Steel Structure</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/tanks/pressure-vessel-fabrication.jpg" alt="Pressure Vessel Fabrication">
+                    <img src="photos/gallery/tanks/pressure-vessel-fabrication.jpg" alt="Pressure Vessel Fabrication" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Pressure Vessels</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/fabrication/pipeline-erection.png" alt="Pipeline Erection">
+                    <img src="photos/gallery/fabrication/pipeline-erection.png" alt="Pipeline Erection" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Pipeline Network</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/fabrication/exhaust-ventilation-system.jpg" alt="Ventilation System">
+                    <img src="photos/gallery/fabrication/exhaust-ventilation-system.jpg" alt="Ventilation System" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Ventilation</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/industrial-plant.jpg" alt="Piping Network">
+                    <img src="photos/gallery/industrial-plant.jpg" alt="Piping Network" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Piping Systems</span></div>
                 </div>
                 <div class="gallery-item">
-                    <img src="photos/gallery/erection/structural-steel-tower.jpg" alt="Structural Tower">
+                    <img src="photos/gallery/erection/structural-steel-tower.jpg" alt="Structural Tower" loading="lazy" decoding="async">
                     <div class="gallery-overlay"><span>Tower Erection</span></div>
                 </div>
             </div>
@@ -755,7 +758,7 @@
                         <span class="pill-tag">GET IN TOUCH</span>
                     </div>
                     <div class="footer-brand-logo">
-                        <img src="photos/logo/prateesh-logo.png" alt="Prateesh Engineering Enterprises" class="footer-logo-img">
+                        <img src="photos/logo/prateesh-logo.png" alt="Prateesh Engineering Enterprises" class="footer-logo-img" loading="lazy" decoding="async">
                         <div class="footer-brand-text">
                             <h2>PRATEESH <span>ENGINEERING ENTERPRISES</span></h2>
                         </div>

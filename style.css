@@ -216,6 +216,70 @@ ul {
 }
 
 /* ==========================================================================
+   SCROLL REVEAL & TEXT ANIMATIONS (Progressive Enhancement)
+   ========================================================================== */
+html.js-enabled .reveal {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+html.js-enabled .reveal.is-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Staggered animation delays for grid items */
+html.js-enabled .about-stats .stat-card:nth-child(2),
+html.js-enabled .projects-grid .project-card:nth-child(2),
+html.js-enabled .advantage-grid .advantage-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+html.js-enabled .about-stats .stat-card:nth-child(3),
+html.js-enabled .projects-grid .project-card:nth-child(3),
+html.js-enabled .advantage-grid .advantage-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+html.js-enabled .about-stats .stat-card:nth-child(4),
+html.js-enabled .projects-grid .project-card:nth-child(4),
+html.js-enabled .advantage-grid .advantage-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+html.js-enabled .gallery-grid .gallery-item:nth-child(2) { transition-delay: 0.05s; }
+html.js-enabled .gallery-grid .gallery-item:nth-child(3) { transition-delay: 0.1s; }
+html.js-enabled .gallery-grid .gallery-item:nth-child(4) { transition-delay: 0.15s; }
+html.js-enabled .gallery-grid .gallery-item:nth-child(5) { transition-delay: 0.2s; }
+html.js-enabled .gallery-grid .gallery-item:nth-child(6) { transition-delay: 0.25s; }
+
+/* Subtle expanding animation for section title bottom accent line */
+html.js-enabled .section-header.reveal .section-title::after {
+    width: 0;
+    transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+}
+
+html.js-enabled .section-header.reveal.is-revealed .section-title::after {
+    width: 80px;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html.js-enabled .reveal,
+    html.js-enabled .horizontal-service-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    html.js-enabled .section-header.reveal .section-title::after {
+        width: 80px !important;
+        transition: none !important;
+    }
+}
+
+/* ==========================================================================
    03. NAVIGATION BAR & MOBILE DRAWER MENU
    ========================================================================== */
 .navbar {
