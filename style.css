@@ -361,7 +361,7 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
 
 .logo-text h1,
 .logo-text .logo-heading {
-    font-size: 1.25rem;
+    font-size: 1.42rem;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: 0.6px;
@@ -382,7 +382,7 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
 .navbar.scrolled .logo-text h1,
 .navbar.scrolled .logo-text .logo-heading {
     color: #111111 !important;
-    font-size: 1.25rem;
+    font-size: 1.42rem;
     display: flex;
     align-items: baseline;
     gap: 8px;
@@ -390,7 +390,7 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
 }
 
 .navbar.scrolled .logo-text span {
-    font-size: 1.25rem !important;
+    font-size: 1.42rem !important;
     font-weight: 800 !important;
     color: #111111 !important;
     display: inline !important;
@@ -1390,7 +1390,7 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
 }
 
 .gallery-navbar .logo-text h1 {
-    font-size: 1.25rem !important;
+    font-size: 1.42rem !important;
     font-weight: 800 !important;
     color: #111111 !important;
     letter-spacing: 0.5px !important;
@@ -1403,7 +1403,7 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
 }
 
 .gallery-navbar .logo-text h1 span {
-    font-size: 1.25rem !important;
+    font-size: 1.42rem !important;
     font-weight: 800 !important;
     color: #111111 !important;
     letter-spacing: 0.5px !important;
