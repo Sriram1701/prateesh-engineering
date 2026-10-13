@@ -118,7 +118,7 @@ ul {
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, var(--white) 0%, var(--primary) 60%, var(--secondary) 100%);
+    background: linear-gradient(90deg, var(--primary) 0%, #cc0000 40%, var(--secondary) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
