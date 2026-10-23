@@ -1389,7 +1389,8 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
     flex-shrink: 0 !important;
 }
 
-.gallery-navbar .logo-text h1 {
+.gallery-navbar .logo-text h1,
+.gallery-navbar .logo-text .logo-heading {
     font-size: 1.68rem !important;
     font-weight: 800 !important;
     color: #111111 !important;
@@ -1402,7 +1403,8 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
     white-space: nowrap !important;
 }
 
-.gallery-navbar .logo-text h1 span {
+.gallery-navbar .logo-text h1 span,
+.gallery-navbar .logo-text .logo-heading span {
     font-size: 1.68rem !important;
     font-weight: 800 !important;
     color: #111111 !important;
