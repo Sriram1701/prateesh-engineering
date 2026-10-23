@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.prateeshengineeringenterprises.com/sitemap.xml
+Sitemap: https://prateeshengineeringenterprises.com/sitemap.xml
