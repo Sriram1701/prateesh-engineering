@@ -27,14 +27,3 @@
   to = "/review"
   status = 301
   force = true
-
-# Internal 200 Rewrites: Clean URLs load underlying HTML files
-[[redirects]]
-  from = "/gallery"
-  to = "/gallery.html"
-  status = 200
-
-[[redirects]]
-  from = "/review"
-  to = "/review.html"
-  status = 200
