@@ -1419,31 +1419,6 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
     transform: translateX(-3px);
 }
 
-.gallery-nav-btn.btn-review {
-    background: #fff5f5;
-    color: #dc2626;
-    border: 1.5px solid #fecdd3;
-}
-
-.gallery-nav-btn.btn-review:hover {
-    background: #dc2626;
-    color: #ffffff;
-    border-color: #dc2626;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
-}
-
-.gallery-nav-btn.btn-call {
-    background: linear-gradient(135deg, #0033cc 0%, #1d68fe 100%);
-    color: #ffffff;
-    border: none;
-    box-shadow: 0 4px 14px rgba(29, 104, 254, 0.28);
-}
-
-.gallery-nav-btn.btn-call:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(29, 104, 254, 0.45);
-}
 
 .gallery-breadcrumb {
     display: inline-flex;
@@ -1834,29 +1809,6 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
     transform: translateY(-2px);
 }
 
-.review-cta-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 24px;
-}
-
-.review-cta-group .btn-leave-review {
-    margin-top: 0;
-}
-
-.btn-leave-review.btn-portal {
-    background: linear-gradient(135deg, #0033cc 0%, #1d68fe 100%);
-    box-shadow: 0 4px 15px rgba(29, 104, 254, 0.35);
-}
-
-.btn-leave-review.btn-portal:hover {
-    background: linear-gradient(135deg, #1d68fe 0%, #2563eb 100%);
-    box-shadow: 0 6px 20px rgba(29, 104, 254, 0.55);
-    transform: translateY(-2px);
-}
 
 /* ==========================================================================
    12. CONTACT & MAP SECTION (Contact Info, Stack, Form, Map Cards, Map Iframes)
@@ -3073,19 +3025,6 @@ html.js-enabled .section-header.reveal.is-revealed .section-title::after {
         font-weight: 700 !important;
     }
 
-    .gallery-nav-btn.btn-review span,
-    .gallery-nav-btn.btn-call span {
-        display: none !important;
-    }
-
-    .gallery-nav-btn.btn-review,
-    .gallery-nav-btn.btn-call {
-        width: 34px !important;
-        height: 34px !important;
-        padding: 0 !important;
-        justify-content: center !important;
-        border-radius: 50% !important;
-    }
 
     .gallery-breadcrumb {
         padding: 4px 12px !important;
