@@ -1,0 +1,16 @@
+# Apache & LiteSpeed Clean URL Configuration
+# Prateesh Engineering Enterprises
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. 301 Permanent Redirect: external requests for .html URLs -> Clean URLs
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L,NE]
+
+    # 2. Clean URLs -> internal rewrite to corresponding .html files
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^([^/]+)/?$ $1.html [L]
+</IfModule>

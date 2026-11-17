@@ -1,0 +1,40 @@
+# Netlify Configuration for Prateesh Engineering Enterprises
+
+[build]
+  publish = "."
+
+# Force 301 Permanent Redirects from .html URLs to Clean URLs
+[[redirects]]
+  from = "/gallery.html"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/review.html"
+  to = "/review"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery/"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/review/"
+  to = "/review"
+  status = 301
+  force = true
+
+# Internal 200 Rewrites: Clean URLs load underlying HTML files
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 200
+
+[[redirects]]
+  from = "/review"
+  to = "/review.html"
+  status = 200

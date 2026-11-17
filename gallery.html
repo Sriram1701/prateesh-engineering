@@ -10,7 +10,7 @@
     <meta name="keywords" content="Prateesh Engineering gallery, mechanical engineering project photos, heavy equipment erection images, storage tank fabrication photos, industrial fabrication portfolio">
     <meta name="author" content="Prateesh Engineering Enterprises">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <link rel="canonical" href="https://prateeshengineeringenterprises.com/gallery.html">
+    <link rel="canonical" href="https://prateeshengineeringenterprises.com/gallery">
 
     <!-- Site Name & Brand Identity (Google Search & Browsers) -->
     <meta name="application-name" content="Prateesh Engineering Enterprises">
@@ -33,7 +33,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Prateesh Engineering Enterprises">
-    <meta property="og:url" content="https://prateeshengineeringenterprises.com/gallery.html">
+    <meta property="og:url" content="https://prateeshengineeringenterprises.com/gallery">
     <meta property="og:title" content="Full Project Gallery | Prateesh Engineering Enterprises">
     <meta property="og:description" content="Explore photographs of industrial fabrication, heavy tank manufacturing, and equipment erection works.">
     <meta property="og:image" content="https://prateeshengineeringenterprises.com/photos/gallery/heavy-equipment-erection.jpg">
@@ -44,7 +44,13 @@
     <meta name="twitter:description" content="Explore photographs of industrial fabrication, heavy tank manufacturing, and equipment erection works.">
     <meta name="twitter:image" content="https://prateeshengineeringenterprises.com/photos/gallery/heavy-equipment-erection.jpg">
 
-    <script>document.documentElement.classList.add('js-enabled');</script>
+    <script>
+        document.documentElement.classList.add('js-enabled');
+        if (window.location.pathname.endsWith('.html')) {
+            const clean = window.location.pathname.replace(/\.html$/, '');
+            window.history.replaceState(null, '', clean + window.location.search + window.location.hash);
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -66,7 +72,7 @@
 <body>
     <nav class="gallery-navbar">
         <div class="gallery-nav-container">
-            <a href="index.html" class="gallery-brand" aria-label="Prateesh Engineering Enterprises Home">
+            <a href="/" class="gallery-brand" aria-label="Prateesh Engineering Enterprises Home">
                 <img src="photos/logo/prateesh-logo.png" alt="Prateesh Engineering Enterprises Logo" class="gallery-brand-logo">
                 <div class="gallery-brand-text">
                     <span class="gallery-brand-title">Prateesh</span>
@@ -75,7 +81,7 @@
             </a>
             
             <div class="gallery-nav-actions">
-                <a href="index.html" class="gallery-nav-btn btn-home" title="Back to Home">
+                <a href="/" class="gallery-nav-btn btn-home" title="Back to Home">
                     <i class="fas fa-arrow-left"></i>
                     <span>Back to Home</span>
                 </a>
@@ -86,7 +92,7 @@
     <div class="service-page-header">
         <div class="container">
             <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
-                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="/"><i class="fas fa-home"></i> Home</a>
                 <i class="fas fa-chevron-right breadcrumb-separator"></i>
                 <span>Project Gallery</span>
             </nav>

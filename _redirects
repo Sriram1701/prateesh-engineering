@@ -1,0 +1,12 @@
+# Netlify Redirects & Clean URL Rewrites
+# Prateesh Engineering Enterprises
+
+# Force 301 Permanent Redirects from .html URLs to Clean URLs
+/gallery.html    /gallery    301!
+/review.html     /review     301!
+/gallery/        /gallery    301!
+/review/         /review     301!
+
+# Internal 200 Rewrites: Clean URLs load underlying HTML files
+/gallery         /gallery.html    200
+/review          /review.html     200

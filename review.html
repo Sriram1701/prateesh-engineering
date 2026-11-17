@@ -15,7 +15,14 @@
     <meta property="og:description" content="Tap to share your review on Google. ISO 9001:2015 Certified Mechanical Engineering, Fabrication & Erection in Cuddalore & Chennai.">
     <meta property="og:image" content="photos/logo/prateesh-logo.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://prateeshengineeringenterprises.com/review.html">
+    <link rel="canonical" href="https://prateeshengineeringenterprises.com/review">
+    <meta property="og:url" content="https://prateeshengineeringenterprises.com/review">
+    <script>
+        if (window.location.pathname.endsWith('.html')) {
+            const clean = window.location.pathname.replace(/\.html$/, '');
+            window.history.replaceState(null, '', clean + window.location.search + window.location.hash);
+        }
+    </script>
 
     <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/x-icon" href="photos/logo/favicon.ico">
@@ -1586,8 +1593,8 @@ body {
         <!-- Dropdown / Drawer Menu -->
         <nav class="drawer-menu hidden" id="drawerMenu">
             <a href="javascript:void(0)" class="drawer-link" id="drawerQrLink"><i class="fas fa-qrcode"></i> Scan / Download Portal QR</a>
-            <a href="index.html" class="drawer-link"><i class="fas fa-home"></i> Main Website Homepage</a>
-            <a href="gallery.html" class="drawer-link"><i class="fas fa-images"></i> Full Project Photo Gallery</a>
+            <a href="/" class="drawer-link"><i class="fas fa-home"></i> Main Website Homepage</a>
+            <a href="gallery" class="drawer-link"><i class="fas fa-images"></i> Full Project Photo Gallery</a>
             <a href="tel:+919597000189" class="drawer-link"><i class="fas fa-phone-alt"></i> Call Office (+91 95970 00189)</a>
             <a href="https://wa.me/919597000189?text=Hello%20Prateesh%20Engineering%20Enterprises,%20I%20would%20like%20to%20inquire%20about%20fabrication%20and%20erection%20services." class="drawer-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp Instant Inquiry</a>
             <a href="https://www.google.com/maps?sca_esv=f4023a036866ecd5&geocode=KRPoHG70l1Q6MT-H8J92oswT&daddr=No:+223/2B,+Chidambaram+Road,+Sipcot,+Pachchyankuppam,+Tamil+Nadu+607005" class="drawer-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-dot"></i> SIPCOT Works Google Map</a>
@@ -1811,7 +1818,7 @@ body {
             </a>
 
             <!-- 4. Gallery -->
-            <a href="gallery.html" class="action-circle-item" title="View Project Gallery">
+            <a href="gallery" class="action-circle-item" title="View Project Gallery">
                 <div class="action-circle-icon icon-gallery">
                     <i class="fas fa-images"></i>
                 </div>
@@ -1819,7 +1826,7 @@ body {
             </a>
 
             <!-- 5. Visit Website -->
-            <a href="index.html" class="action-circle-item" title="Visit Main Website">
+            <a href="/" class="action-circle-item" title="Visit Main Website">
                 <div class="action-circle-icon icon-website">
                     <i class="fas fa-globe"></i>
                 </div>
@@ -1918,7 +1925,7 @@ body {
             </div>
             <div class="qr-url-pill">
                 <i class="fas fa-globe"></i>
-                <span id="qrUrlText">https://prateeshengineeringenterprises.com/review.html</span>
+                <span id="qrUrlText">https://prateeshengineeringenterprises.com/review</span>
             </div>
             <div class="qr-modal-actions">
                 <a href="photos/qr/portal-qr.png" download="Prateesh_Engineering_Review_QR.png" class="qr-action-btn btn-download" id="downloadQrBtn">
@@ -1944,7 +1951,7 @@ body {
 
 // Google Review Target URL for Prateesh Engineering Enterprises
 const GOOGLE_REVIEW_URL = "https://www.google.com/search?q=prateesh+engineering+enterprises+cuddalore";
-const PORTAL_URL = "https://prateeshengineeringenterprises.com/review.html";
+const PORTAL_URL = "https://prateeshengineeringenterprises.com/review";
 
 // Comprehensive Industrial Review Templates Dataset
 const reviewsDataset = {
