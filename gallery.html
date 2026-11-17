@@ -64,26 +64,42 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
-    <nav class="navbar scrolled gallery-navbar">
-        <div class="logo">
-            <a href="index.html" class="logo-link">
-                <img src="photos/logo/prateesh-logo.png" alt="Prateesh Engineering Enterprises" class="logo-img">
-                <div class="logo-text">
-                    <span class="logo-heading">Prateesh <span>Engineering Enterprises</span></span>
+    <nav class="gallery-navbar">
+        <div class="gallery-nav-container">
+            <a href="index.html" class="gallery-brand" aria-label="Prateesh Engineering Enterprises Home">
+                <img src="photos/logo/prateesh-logo.png" alt="Prateesh Engineering Enterprises Logo" class="gallery-brand-logo">
+                <div class="gallery-brand-text">
+                    <span class="gallery-brand-title">Prateesh</span>
+                    <span class="gallery-brand-tagline">Engineering Enterprises</span>
                 </div>
             </a>
+            
+            <div class="gallery-nav-actions">
+                <a href="index.html" class="gallery-nav-btn btn-home" title="Back to Home">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+                <a href="review.html" class="gallery-nav-btn btn-review" title="Dedicated Review Portal">
+                    <i class="fas fa-qrcode"></i>
+                    <span>Review Portal</span>
+                </a>
+                <a href="tel:+919597000189" class="gallery-nav-btn btn-call" title="Call Office Directly">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="call-text">Call Us</span>
+                </a>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a></li>
-            <li><a href="review.html"><i class="fas fa-qrcode"></i> Review Portal</a></li>
-        </ul>
     </nav>
 
     <div class="service-page-header">
         <div class="container">
+            <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <i class="fas fa-chevron-right breadcrumb-separator"></i>
+                <span>Project Gallery</span>
+            </nav>
             <h1>Full Project Gallery</h1>
             <p>We specialize in the manufacturing of high-quality industrial equipments, storage tanks, and pressure vessels designed to meet exact specifications and safety standards.</p>
-            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
         </div>
     </div>
 
