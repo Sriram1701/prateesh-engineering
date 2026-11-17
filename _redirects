@@ -1,8 +1,0 @@
-# Netlify Redirects
-# Prateesh Engineering Enterprises
-
-# Force 301 Permanent Redirects from .html URLs to Clean URLs
-/gallery.html    /gallery    301!
-/review.html     /review     301!
-/gallery/        /gallery    301!
-/review/         /review     301!
